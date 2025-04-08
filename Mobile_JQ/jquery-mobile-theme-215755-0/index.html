@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile Demo</title>
+
+	<!-- Custom Theme and Icons -->
+	<link rel="stylesheet" href="themes/Vaishnavi.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	
+	<!-- jQuery and jQuery Mobile -->
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+	<!-- Page 1 -->
+	<div data-role="page" id="page1" data-theme="b">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Welcome Page</h1>
+		</div>
+
+		<div data-role="content">
+			<p>This is the <strong>first page</strong> demonstrating jQuery Mobile features.</p>
+
+			<!-- List -->
+			<ul data-role="listview" data-inset="true">
+				<li data-role="list-divider">Features</li>
+				<li><a href="#"><i class="ui-icon-info ui-btn-icon-left"></i>Responsive Layouts</a></li>
+				<li><a href="#"><i class="ui-icon-gear ui-btn-icon-left"></i>Widgets & Themes</a></li>
+				<li><a href="#"><i class="ui-icon-arrow-r ui-btn-icon-left"></i>Transitions & Pages</a></li>
+			</ul>
+
+			<!-- Form Elements -->
+			<form>
+				<label for="name">Name:</label>
+				<input type="text" name="name" id="name" placeholder="Enter your name">
+
+				<label for="slider1">Volume:</label>
+				<input type="range" name="slider1" id="slider1" value="25" min="0" max="100">
+
+				<fieldset data-role="controlgroup" data-type="horizontal">
+					<legend>Choose:</legend>
+					<input type="radio" name="choice" id="choice1" value="a" checked>
+					<label for="choice1">A</label>
+					<input type="radio" name="choice" id="choice2" value="b">
+					<label for="choice2">B</label>
+				</fieldset>
+
+				<label for="toggle">Enable Notifications:</label>
+				<select name="toggle" id="toggle" data-role="slider">
+					<option value="off">Off</option>
+					<option value="on">On</option>
+				</select>
+			</form>
+
+			<!-- Button with data attributes and transition -->
+			<a href="#page2" data-role="button" data-icon="arrow-r" data-transition="slide" data-theme="a">Go to Page 2</a>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<h4>Page 1 Footer</h4>
+		</div>
+	</div>
+
+	<!-- Page 2 -->
+	<div data-role="page" id="page2" data-theme="a">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Second Page</h1>
+		</div>
+
+		<div data-role="content">
+			<h3>This is the second page</h3>
+			<p>Here we use transitions, themes, and other widgets.</p>
+
+			<!-- Collapsible -->
+			<div data-role="collapsible">
+				<h4>Click to expand</h4>
+				<p>This is some hidden content inside a collapsible panel.</p>
+			</div>
+
+			<!-- List with count and icon -->
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#"><i class="ui-icon-tag ui-btn-icon-left"></i>Notifications<span class="ui-li-count">3</span></a></li>
+				<li><a href="#"><i class="ui-icon-grid ui-btn-icon-left"></i>Messages<span class="ui-li-count">7</span></a></li>
+			</ul>
+
+			<!-- Back Button -->
+			<a href="#page1" data-role="button" data-icon="arrow-l" data-transition="slidefade" data-theme="b">Back to Page 1</a>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<h4>Page 2 Footer</h4>
+		</div>
+	</div>
+
+</body>
+</html>
